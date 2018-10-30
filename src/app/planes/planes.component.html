@@ -1,0 +1,17 @@
+<h2>Air Planes</h2>
+<ul class="planes">
+  <li *ngFor="let plane of planes" [class.selected]="plane === selectedPlane" (click)="onSelect(plane)">
+    <span class="badge">{{plane.id}}</span> {{plane.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedPlane">
+
+  <h2>{{selectedPlane.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedPlane.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedPlane.name" placeholder="name">
+    </label>
+  </div>
+</div>
