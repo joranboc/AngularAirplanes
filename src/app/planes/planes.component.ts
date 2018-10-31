@@ -20,7 +20,7 @@ export class PlanesComponent implements OnInit {
     this.getPlanes();
   }
   getPlanes(): void {
-    this.planes = this.planeService.getPLanes();
+    this.planeService.getPlanes().subscribe(planes => this.planes = planes);
   }
   onSelect(plane: Plane):void {
     this.selectedPlane = plane;
