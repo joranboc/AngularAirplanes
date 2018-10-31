@@ -5,13 +5,5 @@
   </li>
 </ul>
 
-<div *ngIf="selectedPlane">
 
-  <h2>{{selectedPlane.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedPlane.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedPlane.name" placeholder="name">
-    </label>
-  </div>
-</div>
+<app-plane-detail [plane]="selectedPlane"></app-plane-detail>

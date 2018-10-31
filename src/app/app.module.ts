@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { PlanesComponent } from './planes/planes.component';
+import { PlaneDetailComponent } from './plane-detail/plane-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlanesComponent
+    PlanesComponent,
+    PlaneDetailComponent
   ],
   imports: [
     BrowserModule,
