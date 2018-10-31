@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PlanesComponent } from './planes/planes.component';
 import { PlaneDetailComponent } from './plane-detail/plane-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlanesComponent,
     PlaneDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

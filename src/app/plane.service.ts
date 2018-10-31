@@ -15,4 +15,8 @@ export class PlaneService {
     this.messageService.add('PlaneService: fetched planes');
     return of(PLANES);
   }
+  getPlane(id: number): Observable<Plane>{
+    this.messageService.add(`PlaneService: fetched plane id=${id}`);
+    return of(PLANES.find(plane => plane.id === id))
+  }
 }

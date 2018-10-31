@@ -11,7 +11,6 @@ import {  PlaneService } from '../plane.service';
 })
 export class PlanesComponent implements OnInit {
 
-  selectedPlane: Plane;
 
   planes: Plane[];
   constructor(private planeService: PlaneService) { }
@@ -22,8 +21,6 @@ export class PlanesComponent implements OnInit {
   getPlanes(): void {
     this.planeService.getPlanes().subscribe(planes => this.planes = planes);
   }
-  onSelect(plane: Plane):void {
-    this.selectedPlane = plane;
-  }
+
 
 }

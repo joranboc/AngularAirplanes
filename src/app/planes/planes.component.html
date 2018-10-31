@@ -1,9 +1,8 @@
 <h2>Air Planes</h2>
 <ul class="planes">
-  <li *ngFor="let plane of planes" [class.selected]="plane === selectedPlane" (click)="onSelect(plane)">
-    <span class="badge">{{plane.id}}</span> {{plane.name}}
-  </li>
-</ul>
-
-
-<app-plane-detail [plane]="selectedPlane"></app-plane-detail>
+    <li *ngFor="let plane of planes">
+      <a routerLink="/detail/{{plane.id}}">
+        <span class="badge">{{plane.id}}</span> {{plane.name}}
+      </a>
+    </li>
+  </ul>
