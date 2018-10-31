@@ -21,6 +21,17 @@ export class PlanesComponent implements OnInit {
   getPlanes(): void {
     this.planeService.getPlanes().subscribe(planes => this.planes = planes);
   }
-
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.planeService.addPlane({ name } as Plane)
+      .subscribe(plane => {
+        this.planes.push(plane);
+      });
+  }
+  delete(plane: Plane): void {
+    this.planes = this.planes.filter(p => p !== plane);
+    this.planeService.deletePlane(plane).subscribe();
+  }
 
 }

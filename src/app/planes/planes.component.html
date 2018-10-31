@@ -1,8 +1,20 @@
 <h2>Air Planes</h2>
+<div>
+    <label>Plane name:
+      <input #planeName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(planeName.value); planeName.value=''">
+      add
+    </button>
+  </div>
+
 <ul class="planes">
     <li *ngFor="let plane of planes">
       <a routerLink="/detail/{{plane.id}}">
         <span class="badge">{{plane.id}}</span> {{plane.name}}
       </a>
+      <button class="delete" title="delete plane"
+      (click)="delete(plane)">x</button>
     </li>
   </ul>

@@ -28,4 +28,8 @@ export class PlaneDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  save(): void {
+    this.planeService.updatePlane(this.plane)
+      .subscribe(() => this.goBack());
+  }
 }
